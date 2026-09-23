@@ -1513,17 +1513,14 @@ body {
     }
 
     .timeline-date {
-        grid-column: 1;
-        grid-row: 1;
-
-        justify-self: end;
-
-        text-align: right;
-
-        font-size: 12px;
-
-        padding-top: 3px;
-    }
+    grid-column: 1;
+    justify-self: center;
+    max-width: 250px;
+    text-align: center;
+    color: #162d44;
+    font-size: 14px;
+    font-weight: 700;
+}
 
     .timeline-point {
         position: relative;
