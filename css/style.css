@@ -195,7 +195,8 @@ body {
 ================================================== */
 
 .main-content {
-    margin-left: 220px;
+    margin-left: 250px;
+    width: calc(100% - 250px);
 }
 
 
@@ -1322,13 +1323,13 @@ body {
     left: 0;
     top: 0;
 
-    width: 220px;
+    width: 180px;
     height: 100vh;
 
-    padding: 25px 15px;
+    padding: 20px 12px;
 
     overflow-y: auto;
-    }
+}
 
     .profil-sidebar {
         margin-bottom: 20px;
@@ -1340,27 +1341,24 @@ body {
     }
 
     .navigation {
-        flex-direction: row;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 4px;
+}
 
-        flex-wrap: wrap;
-
-        justify-content: center;
-
-        gap: 4px;
-    }
-
-    .navigation a {
-        font-size: 13px;
-
-        padding: 8px 10px;
-    }
+   .navigation a {
+    font-size: 12px;
+    padding: 8px 6px;
+}
 
     .sous-menu {
         display: none;
     }
 
     .main-content {
-        margin-left: 0;
+    margin-left: 180px;
+    width: calc(100% - 180px);
     }
 
     .section {
@@ -1425,14 +1423,11 @@ body {
 
 .timeline-date {
     grid-column: 1;
-
-    justify-self: center;
-
-    text-align: center;
-
+    justify-self: end;
+    text-align: right;
     font-size: 12px;
-
     color: #162d44;
+    padding-right: 5px;
 }
 
 .timeline-point {
