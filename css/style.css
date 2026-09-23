@@ -1321,34 +1321,34 @@ body {
 
     .sidebar {
         position: relative;
-        top: auto;
-        left: auto;
-
         width: 100%;
         height: auto;
 
-        padding: 15px;
+        padding: 12px 10px;
 
-        display: flex;
-        align-items: center;
+        display: block;
+    }
+
+    .profil-sidebar {
+        margin-bottom: 12px;
+    }
+
+    .profil-sidebar img {
+        width: 65px;
+        height: 65px;
     }
 
     .navigation {
-        width: 100%;
-
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
         justify-content: center;
-        align-items: center;
-
-        gap: 5px;
+        gap: 4px;
     }
 
     .navigation a {
         font-size: 12px;
-        padding: 8px 10px;
+        padding: 7px 8px;
     }
 
     .sous-menu {
@@ -1358,20 +1358,14 @@ body {
     .main-content {
         margin-left: 0;
         width: 100%;
-        padding-top: 20px;
     }
 
-
     .section {
-        padding: 70px 7%;
+        padding: 60px 5%;
     }
 
     .accueil {
-        flex-direction: column;
-
-        text-align: center;
-
-        justify-content: center;
+        min-height: calc(100vh - 150px);
     }
 
     .accueil-description {
