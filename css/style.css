@@ -1317,48 +1317,48 @@ body {
 
 @media (max-width: 900px) {
 
+    /* Menu en haut */
     .sidebar {
-    position: fixed;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        min-height: 65px;
+        padding: 10px 15px;
+        z-index: 1000;
 
-    left: 0;
-    top: 0;
-
-    width: 180px;
-    height: 100vh;
-
-    padding: 20px 12px;
-
-    overflow-y: auto;
-}
-
-    .profil-sidebar {
-        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
     }
 
-    .profil-sidebar img {
-        width: 90px;
-        height: 90px;
-    }
-
+    /* Navigation horizontale */
     .navigation {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 4px;
-}
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
 
-   .navigation a {
-    font-size: 12px;
-    padding: 8px 6px;
-}
+    .navigation a {
+        font-size: 12px;
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
 
+    /* Sous-menu */
     .sous-menu {
         display: none;
     }
 
+    /* Contenu sous le menu */
     .main-content {
-    margin-left: 180px;
-    width: calc(100% - 180px);
+        margin-left: 0;
+        width: 100%;
+        padding-top: 85px;
     }
 
     .section {
