@@ -255,6 +255,7 @@ if (formulaireContact) {
 
 const boutonProjets = document.querySelector(".menu-projets > a");
 const menuProjets = document.querySelector(".menu-projets");
+const liensSousMenu = document.querySelectorAll(".sous-menu a");
 
 if (boutonProjets && menuProjets) {
 
@@ -267,6 +268,19 @@ if (boutonProjets && menuProjets) {
             menuProjets.classList.toggle("menu-ouvert");
 
         }
+
+    });
+
+
+    /* Fermer le sous-menu après avoir choisi un projet */
+
+    liensSousMenu.forEach((lien) => {
+
+        lien.addEventListener("click", () => {
+
+            menuProjets.classList.remove("menu-ouvert");
+
+        });
 
     });
 
