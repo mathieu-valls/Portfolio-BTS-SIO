@@ -253,13 +253,15 @@ if (formulaireContact) {
    MENU PROJETS — MOBILE
 ================================================== */
 
-const boutonProjets = document.querySelector(".menu-projets > a");
 const menuProjets = document.querySelector(".menu-projets");
-const liensSousMenu = document.querySelectorAll(".sous-menu a");
 
-if (boutonProjets && menuProjets) {
+if (menuProjets) {
 
-    boutonProjets.addEventListener("click", (event) => {
+    /* OUVRIR / FERMER LE SOUS-MENU */
+
+    const boutonProjets = menuProjets.querySelector(":scope > a");
+
+    boutonProjets.addEventListener("click", function (event) {
 
         if (window.innerWidth <= 900) {
 
@@ -272,11 +274,13 @@ if (boutonProjets && menuProjets) {
     });
 
 
-    /* Fermer le sous-menu après avoir choisi un projet */
+    /* FERMER LE SOUS-MENU APRÈS UN CLIC */
 
-    liensSousMenu.forEach((lien) => {
+    const liensSousMenu = menuProjets.querySelectorAll(".sous-menu a");
 
-        lien.addEventListener("click", () => {
+    liensSousMenu.forEach(function (lien) {
+
+        lien.addEventListener("click", function () {
 
             menuProjets.classList.remove("menu-ouvert");
 
