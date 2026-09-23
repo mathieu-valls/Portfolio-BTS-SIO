@@ -249,3 +249,25 @@ if (formulaireContact) {
     });
 
 }
+/* ==================================================
+   MENU PROJETS — MOBILE
+================================================== */
+
+const boutonProjets = document.querySelector(".menu-projets > a");
+const menuProjets = document.querySelector(".menu-projets");
+
+if (boutonProjets && menuProjets) {
+
+    boutonProjets.addEventListener("click", (event) => {
+
+        if (window.innerWidth <= 900) {
+
+            event.preventDefault();
+
+            menuProjets.classList.toggle("menu-ouvert");
+
+        }
+
+    });
+
+}

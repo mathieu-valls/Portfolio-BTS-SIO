@@ -1429,205 +1429,195 @@ body {
 
 @media (max-width: 900px) {
 
-    /* ----------------------------------------------
-       MENU MOBILE
-    ---------------------------------------------- */
+   /* ----------------------------------------------
+   MENU MOBILE — BARRE FIXE EN BAS
+---------------------------------------------- */
 
-    .sidebar {
-        position: relative;
-        top: auto;
-        left: auto;
+.sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
 
-        width: 100%;
-        max-width: 100%;
-        height: auto;
+    top: auto;
 
-        padding: 20px 15px 80px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 
-        box-sizing: border-box;
+    padding: 8px 5px;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    box-sizing: border-box;
 
+    display: block;
 
-    /* ----------------------------------------------
-       PROFIL DU MENU MOBILE
-    ---------------------------------------------- */
+    background-color: #000000;
 
-    .profil-sidebar {
-        width: 100%;
+    z-index: 1000;
+}
 
-        display: flex;
-        flex-direction: column;
 
-        align-items: center;
-        justify-content: center;
+/* ----------------------------------------------
+   PROFIL CACHÉ SUR MOBILE
+---------------------------------------------- */
 
-        text-align: center;
-    }
+.profil-sidebar {
+    display: none;
+}
 
-    .profil-sidebar img {
-        width: 90px;
-        height: 90px;
 
-        margin-bottom: 10px;
-    }
+/* ----------------------------------------------
+   NAVIGATION
+---------------------------------------------- */
 
-    .profil-sidebar h2 {
-        margin: 5px 0;
-    }
+.navigation {
+    width: 100%;
 
-    .profil-sidebar p {
-        margin: 0 0 20px;
-    }
+    display: grid;
 
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr));
 
-    /* ----------------------------------------------
-       NAVIGATION MOBILE
-    ---------------------------------------------- */
+    align-items: center;
 
-    .navigation {
-        display: grid;
+    gap: 0;
+}
 
-        grid-template-columns:
-            repeat(4, minmax(0, 1fr));
 
-        grid-template-rows:
-            auto auto;
+/* ----------------------------------------------
+   BOUTONS DU MENU
+---------------------------------------------- */
 
-        width: 100%;
+.navigation > a,
+.menu-projets > a {
+    display: flex;
 
-        align-items: start;
+    flex-direction: column;
 
-        gap: 0;
-    }
+    align-items: center;
+    justify-content: center;
 
-    .navigation > a {
-        display: flex;
+    gap: 3px;
 
-        align-items: center;
-        justify-content: center;
+    min-width: 0;
+    width: 100%;
 
-        gap: 5px;
+    box-sizing: border-box;
 
-        padding: 10px 3px;
+    padding: 6px 2px;
 
-        min-width: 0;
-        width: 100%;
+    color: #ffffff;
 
-        box-sizing: border-box;
+    text-decoration: none;
 
-        white-space: nowrap;
+    white-space: nowrap;
 
-        text-align: center;
+    font-size: 10px;
 
-        font-size: 13px;
-    }
+    text-align: center;
+}
 
-    .navigation a i {
-        width: auto;
-        font-size: 15px;
-    }
+.navigation > a i,
+.menu-projets > a i {
+    width: auto;
 
+    font-size: 17px;
+}
 
-    /* ----------------------------------------------
-       PROJETS
-    ---------------------------------------------- */
 
-    .menu-projets {
-        grid-column: 2 / 4;
-        grid-row: 2;
+/* ----------------------------------------------
+   PROJETS
+---------------------------------------------- */
 
-        position: relative;
+.menu-projets {
+    position: relative;
 
-        display: flex;
+    display: flex;
 
-        justify-content: center;
-        align-items: center;
+    align-items: center;
+    justify-content: center;
 
-        width: 100%;
-    }
+    width: 100%;
+}
 
-    .menu-projets > a {
-        display: flex;
 
-        align-items: center;
-        justify-content: center;
+/* ----------------------------------------------
+   SOUS-MENU PROJETS
+---------------------------------------------- */
 
-        gap: 5px;
+.sous-menu {
+    position: absolute;
 
-        padding: 10px 3px;
+    bottom: 100%;
+    left: 50%;
 
-        white-space: nowrap;
+    transform: translateX(-50%);
 
-        font-size: 13px;
-    }
+    display: none;
 
+    flex-direction: column;
 
-    /* ----------------------------------------------
-       CONTACT
-    ---------------------------------------------- */
+    align-items: center;
 
-    .navigation > a[href="#contact"] {
-        grid-column: 4;
-        grid-row: 2;
-    }
+    gap: 3px;
 
+    width: 190px;
 
-    /* ----------------------------------------------
-       SOUS-MENU PROJETS
-    ---------------------------------------------- */
+    padding: 8px;
 
-    .sous-menu {
-        position: absolute;
+    margin-bottom: 5px;
 
-        top: 100%;
-        left: 50%;
+    background-color: #000000;
 
-        transform: translateX(-50%);
+    border-radius: 6px;
 
-        display: flex;
-        flex-direction: column;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.25);
+}
 
-        align-items: center;
+.sous-menu a {
+    display: flex;
 
-        gap: 2px;
+    align-items: center;
+    justify-content: center;
 
-        margin-top: 5px;
+    gap: 6px;
 
-        width: 190px;
-    }
+    width: 100%;
 
-    .sous-menu a {
-        display: flex;
+    padding: 7px 5px;
 
-        align-items: center;
-        justify-content: center;
+    box-sizing: border-box;
 
-        gap: 5px;
+    color: #ffffff;
 
-        padding: 5px 2px;
+    text-decoration: none;
 
-        white-space: nowrap;
+    font-size: 11px;
 
-        font-size: 12px;
-    }
+    white-space: nowrap;
+}
 
 
-    /* ----------------------------------------------
-       CONTENU PRINCIPAL
-    ---------------------------------------------- */
+/* Sous-menu ouvert */
 
-    .main-content {
-        width: 100%;
-        max-width: 100%;
+.menu-projets.menu-ouvert .sous-menu {
+    display: flex;
+}
 
-        margin-left: 0;
 
-        padding-top: 0;
-    }
+/* ----------------------------------------------
+   CONTENU — ESPACE POUR LA BARRE DU BAS
+---------------------------------------------- */
+
+.main-content {
+    width: 100%;
+    max-width: 100%;
+
+    margin-left: 0;
+
+    padding-top: 0;
+
+    padding-bottom: 75px;
+}
 
 
     /* ----------------------------------------------
