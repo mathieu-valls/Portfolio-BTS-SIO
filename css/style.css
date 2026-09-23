@@ -1430,22 +1430,25 @@ body {
 @media (max-width: 900px) {
 
     /* ----------------------------------------------
-       MENU MOBILE FIXE
+       MENU MOBILE
     ---------------------------------------------- */
 
     .sidebar {
         position: relative;
         top: auto;
         left: auto;
+
         width: 100%;
         max-width: 100%;
         height: auto;
-        padding: 20px 15px;
+
+        padding: 20px 15px 80px;
+
         box-sizing: border-box;
+
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 80px;
     }
 
 
@@ -1455,16 +1458,20 @@ body {
 
     .profil-sidebar {
         width: 100%;
+
         display: flex;
         flex-direction: column;
+
         align-items: center;
         justify-content: center;
+
         text-align: center;
     }
 
     .profil-sidebar img {
         width: 90px;
         height: 90px;
+
         margin-bottom: 10px;
     }
 
@@ -1483,14 +1490,67 @@ body {
 
     .navigation {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        grid-template-rows:
+            auto auto;
+
+        width: 100%;
+
         align-items: start;
+
         gap: 0;
+    }
+
+    .navigation > a {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 5px;
+
+        padding: 10px 3px;
+
+        min-width: 0;
+        width: 100%;
+
+        box-sizing: border-box;
+
+        white-space: nowrap;
+
+        text-align: center;
+
+        font-size: 13px;
+    }
+
+    .navigation a i {
+        width: auto;
+        font-size: 15px;
+    }
+
+
+    /* ----------------------------------------------
+       PROJETS
+    ---------------------------------------------- */
+
+    .menu-projets {
+        grid-column: 2 / 4;
+        grid-row: 2;
+
+        position: relative;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
         width: 100%;
     }
 
-    .navigation > a,
-    .navigation .sous-menu a {
+    .menu-projets > a {
         display: flex;
 
         align-items: center;
@@ -1501,56 +1561,57 @@ body {
         padding: 10px 3px;
 
         white-space: nowrap;
-        text-align: center;
+
         font-size: 13px;
-        min-width: 0;
     }
 
-    .navigation a i {
-        width: auto;
 
-        font-size: 15px;
-    }
+    /* ----------------------------------------------
+       CONTACT
+    ---------------------------------------------- */
 
-    .navigation > a:last-child {
+    .navigation > a[href="#contact"] {
         grid-column: 4;
         grid-row: 2;
     }
 
 
     /* ----------------------------------------------
-       PROJETS DANS LE MENU MOBILE
+       SOUS-MENU PROJETS
     ---------------------------------------------- */
-
-    .menu-projets {
-        grid-column: 2 / 4;
-        grid-row: 2;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
     .sous-menu {
         position: absolute;
-        top: 70%;
-        left: 35%;
-        transform: none;
+
+        top: 100%;
+        left: 50%;
+
+        transform: translateX(-50%);
+
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+
+        align-items: center;
+
         gap: 2px;
+
         margin-top: 5px;
+
         width: 190px;
     }
 
     .sous-menu a {
         display: flex;
+
         align-items: center;
         justify-content: center;
-        gap: 6px;
+
+        gap: 5px;
+
         padding: 5px 2px;
+
         white-space: nowrap;
+
         font-size: 12px;
     }
 
@@ -1562,7 +1623,9 @@ body {
     .main-content {
         width: 100%;
         max-width: 100%;
+
         margin-left: 0;
+
         padding-top: 0;
     }
 
@@ -1574,6 +1637,7 @@ body {
     .section {
         width: 100%;
         max-width: 100%;
+
         box-sizing: border-box;
     }
 
@@ -1637,11 +1701,6 @@ body {
 
     /* ----------------------------------------------
        TIMELINE MOBILE
-
-       Date | Point | Carte
-
-       La date et le point sont centrés
-       verticalement par rapport à la carte.
     ---------------------------------------------- */
 
     .timeline {
@@ -1798,11 +1857,11 @@ body {
 
 
     /* ----------------------------------------------
-       MENU
+       MENU MOBILE
     ---------------------------------------------- */
 
     .navigation > a,
-    .navigation .sous-menu a {
+    .menu-projets > a {
         font-size: 10px;
 
         gap: 4px;
@@ -1810,6 +1869,10 @@ body {
 
     .navigation a i {
         font-size: 14px;
+    }
+
+    .sous-menu a {
+        font-size: 12px;
     }
 
 
@@ -1928,67 +1991,5 @@ body {
 
         padding-top: 6px;
         padding-bottom: 6px;
-    }
-}
-/* ===== MENU MOBILE ===== */
-@media (max-width: 900px) {
-
-    .navigation {
-        width: 100% !important;
-        display: grid !important;
-        grid-template-columns: repeat(4, 1fr) !important;
-        gap: 0 !important;
-    }
-
-    .navigation > a,
-    .menu-projets > a {
-        min-width: 0 !important;
-        width: 100% !important;
-        box-sizing: border-box;
-        font-size: 13px;
-        white-space: nowrap;
-    }
-
-    /* Accueil / À propos / Parcours / Compétences */
-    .navigation > a:nth-child(1),
-    .navigation > a:nth-child(2),
-    .navigation > a:nth-child(3),
-    .navigation > a:nth-child(4) {
-        grid-row: 1 !important;
-    }
-
-    /* Projets */
-    .menu-projets {
-        grid-column: 2 / 4 !important;
-        grid-row: 2 !important;
-        position: relative !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
-
-    /* Contact */
-    .navigation > a:last-child {
-        grid-column: 4 !important;
-        grid-row: 2 !important;
-    }
-
-    /* Sous-menu */
-    .sous-menu {
-        position: absolute !important;
-        top: 100% !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 2px !important;
-        margin-top: 5px !important;
-        width: 190px !important;
-    }
-
-    .sous-menu a {
-        white-space: nowrap !important;
-        font-size: 12px !important;
     }
 }
