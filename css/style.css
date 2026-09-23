@@ -195,7 +195,7 @@ body {
 ================================================== */
 
 .main-content {
-    margin-left: 250px;
+    margin-left: 220px;
 }
 
 
@@ -1317,13 +1317,17 @@ body {
 @media (max-width: 900px) {
 
     .sidebar {
-        position: relative;
+    position: fixed;
 
-        width: 100%;
+    left: 0;
+    top: 0;
 
-        height: auto;
+    width: 220px;
+    height: 100vh;
 
-        padding: 25px;
+    padding: 25px 15px;
+
+    overflow-y: auto;
     }
 
     .profil-sidebar {
@@ -1408,40 +1412,45 @@ body {
     }
 
     .timeline::before {
-        left: 20px;
-    }
+    left: 20px;
+}
 
-    .timeline-item {
-        grid-template-columns: 40px 1fr;
+.timeline-item {
+    position: relative;
 
-        gap: 15px;
-    }
+    grid-template-columns: 85px 1fr;
 
-    .timeline-date {
-        grid-column: 1;
+    gap: 15px;
+}
 
-        justify-self: center;
+.timeline-date {
+    grid-column: 1;
 
-        text-align: center;
+    justify-self: center;
 
-        font-size: 12px;
+    text-align: center;
 
-        color: #162d44;
-    }
+    font-size: 12px;
 
-    .timeline-point {
-        grid-column: 1;
+    color: #162d44;
+}
 
-        grid-row: 1;
+.timeline-point {
+    position: absolute;
 
-        align-self: center;
-    }
+    left: 20px;
+    top: 50%;
 
-    .timeline-card {
-        grid-column: 2;
+    transform: translate(-50%, -50%);
 
-        grid-row: 1;
-    }
+    z-index: 2;
+}
+
+.timeline-card {
+    grid-column: 2;
+
+    grid-row: 1;
+}
 
     .modal-contenu {
         padding: 35px 25px;
